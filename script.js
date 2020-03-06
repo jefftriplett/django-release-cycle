@@ -175,10 +175,17 @@ function drawChart() {
     ]);
   }
 
+  // height per horizontal track
+  var trackHeight = 30;
+  // buffer for container height
+  var bufferForHeight = 50;
+  // height of entire container
+  var containerHeight = (trackHeight * releases.length) + bufferForHeight;
+
   var options = {
-    height: 600,
+    height: containerHeight,
     gantt: {
-      trackHeight: 30,
+      trackHeight: trackHeight,
       palette: [
         {
           // Red
@@ -279,6 +286,7 @@ function drawChart() {
     svg = null;
     markerLabel = null;
     chartElements = container.getElementsByTagName('svg');
+
     if (chartElements.length > 0) {
       svg = chartElements[0];
     }
@@ -318,7 +326,7 @@ function drawChart() {
     markerLine = timeline.cloneNode(true);
     markerLine.setAttribute('y', 0);
     markerLine.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan)));
-    markerLine.setAttribute('height', options.height);
+    markerLine.setAttribute('height', options.height - bufferForHeight);
     markerLine.setAttribute('width', 1);
     markerLine.setAttribute('stroke', 'none');
     markerLine.setAttribute('stroke-width', '0');
