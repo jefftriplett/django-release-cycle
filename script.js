@@ -48,55 +48,55 @@ function drawChart() {
     //   start: new Date(2011, 03, 23),
     //   end: new Date(2013, 02, 26)
     // },
-    {
-      taskID: "1.4",
-      taskName: "Django 1.4 LTS",
-      resource: "dead",
-      start: new Date(2012, 03, 23),
-      end: new Date(2015, 10, 01)
-    },
-    {
-      taskID: "1.5",
-      taskName: "Django 1.5",
-      resource: "dead",
-      start: new Date(2013, 03, 26),
-      end: new Date(2014, 09, 02)
-    },
-    {
-      taskID: "1.6",
-      taskName: "Django 1.6",
-      resource: "dead",
-      start: new Date(2013, 11, 03),
-      end: new Date(2015, 04, 01)
-    },
-    {
-      taskID: "1.7",
-      taskName: "Django 1.7",
-      resource: "dead",
-      start: new Date(2014, 09, 02),
-      end: new Date(2015, 12, 01)
-    },
-    {
-      taskID: "1.8",
-      taskName: "Django 1.8 LTS",
-      resource: "dead",
-      start: new Date(2015, 04, 01),
-      end: new Date(2018, 04, 01)
-    },
-    {
-      taskID: "1.9",
-      taskName: "Django 1.9",
-      resource: "dead",
-      start: new Date(2015, 12, 01),
-      end: new Date(2017, 04, 04)
-    },
-    {
-      taskID: "1.10",
-      taskName: "Django 1.10",
-      resource: "dead",
-      start: new Date(2016, 08, 01),
-      end: new Date(2017, 12, 02)
-    },
+//     {
+//       taskID: "1.4",
+//       taskName: "Django 1.4 LTS",
+//       resource: "dead",
+//       start: new Date(2012, 03, 23),
+//       end: new Date(2015, 10, 01)
+//     },
+//     {
+//       taskID: "1.5",
+//       taskName: "Django 1.5",
+//       resource: "dead",
+//       start: new Date(2013, 03, 26),
+//       end: new Date(2014, 09, 02)
+//     },
+//     {
+//       taskID: "1.6",
+//       taskName: "Django 1.6",
+//       resource: "dead",
+//       start: new Date(2013, 11, 03),
+//       end: new Date(2015, 04, 01)
+//     },
+//     {
+//       taskID: "1.7",
+//       taskName: "Django 1.7",
+//       resource: "dead",
+//       start: new Date(2014, 09, 02),
+//       end: new Date(2015, 12, 01)
+//     },
+//     {
+//       taskID: "1.8",
+//       taskName: "Django 1.8 LTS",
+//       resource: "dead",
+//       start: new Date(2015, 04, 01),
+//       end: new Date(2018, 04, 01)
+//     },
+//     {
+//       taskID: "1.9",
+//       taskName: "Django 1.9",
+//       resource: "dead",
+//       start: new Date(2015, 12, 01),
+//       end: new Date(2017, 04, 04)
+//     },
+//     {
+//       taskID: "1.10",
+//       taskName: "Django 1.10",
+//       resource: "dead",
+//       start: new Date(2016, 08, 01),
+//       end: new Date(2017, 12, 02)
+//     },
     {
       taskID: "1.11",
       taskName: "Django 1.11 LTS",
