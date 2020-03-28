@@ -175,10 +175,17 @@ function drawChart() {
     ]);
   }
 
+  // height per horizontal track
+  var trackHeight = 30;
+  // buffer for container height
+  var bufferForHeight = 50;
+  // height of entire container
+  var containerHeight = (trackHeight * releases.length) + bufferForHeight;
+
   var options = {
-    height: 600,
+    height: containerHeight,
     gantt: {
-      trackHeight: 30,
+      trackHeight: trackHeight,
       palette: [
         {
           // Red
@@ -248,9 +255,88 @@ function drawChart() {
     }
   };
 
+  var container = document.getElementById("chart_div");
   var chart = new google.visualization.Gantt(
-    document.getElementById("chart_div")
+    container
   );
 
+  // declare these variables to be used in addMarker function
+  var dateRangeStart = data.getColumnRange(3);
+  var dateRangeEnd = data.getColumnRange(4);
+  var formatDate = new google.visualization.DateFormat({
+    pattern: 'yyyy-MM-dd'
+  });
+
+  // adds the vertical line
+  function addMarker(markerDate) {
+    var baseline;
+    var baselineBounds;
+    var chartElements;
+    var markerLabel;
+    var markerLine;
+    var markerSpan;
+    var svg;
+    var timeline;
+    var timelineUnit;
+    var timelineWidth;
+    var timespan;
+  
+    baseline = null;
+    timeline = null;
+    svg = null;
+    markerLabel = null;
+    chartElements = container.getElementsByTagName('svg');
+
+    if (chartElements.length > 0) {
+      svg = chartElements[0];
+    }
+    chartElements = container.getElementsByTagName('rect');
+    if (chartElements.length > 0) {
+      timeline = chartElements[0];
+    }
+    chartElements = container.getElementsByTagName('path');
+    if (chartElements.length > 0) {
+      baseline = chartElements[0];
+    }
+    chartElements = container.getElementsByTagName('text');
+    if (chartElements.length > 0) {
+      markerLabel = chartElements[0].cloneNode(true);
+    }
+    if ((svg === null) || (timeline === null) || (baseline === null) || (markerLabel === null) ||
+        (markerDate.getTime() < dateRangeStart.min.getTime()) ||
+        (markerDate.getTime() > dateRangeEnd.max.getTime())) {
+      return;
+    }
+  
+    // calculate placement
+    timelineWidth = parseFloat(timeline.getAttribute('width'));
+    baselineBounds = baseline.getBBox();
+    timespan = dateRangeEnd.max.getTime() - dateRangeStart.min.getTime();
+    timelineUnit = (timelineWidth - baselineBounds.x) / timespan;
+    markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
+  
+    // add label
+    markerLabel.setAttribute('fill', '#e91e63');
+    markerLabel.setAttribute('y', options.height);
+    markerLabel.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan) - 4));
+    markerLabel.textContent = formatDate.formatValue(markerDate);
+    svg.appendChild(markerLabel);
+  
+    // add line
+    markerLine = timeline.cloneNode(true);
+    markerLine.setAttribute('y', 0);
+    markerLine.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan)));
+    markerLine.setAttribute('height', options.height - bufferForHeight);
+    markerLine.setAttribute('width', 1);
+    markerLine.setAttribute('stroke', 'none');
+    markerLine.setAttribute('stroke-width', '0');
+    markerLine.setAttribute('fill', '#e91e63');
+    svg.appendChild(markerLine);
+  }
+
   chart.draw(data, options);
+  google.visualization.events.addListener(chart, 'ready', function () {
+    // add marker for current date
+    addMarker(new Date());
+  });
 }
