@@ -213,12 +213,12 @@ function drawChart() {
           dark: "#a52714",
           light: "#f4c7c3"
         },
-        {
-          // Yellow
-          color: "#f2a600",
-          dark: "#ee8100",
-          light: "#fce8b2"
-        },
+        // {
+        //   // Yellow
+        //   color: "#f2a600",
+        //   dark: "#ee8100",
+        //   light: "#fce8b2"
+        // },
         {
           // Green
           color: "#0f9d58",
