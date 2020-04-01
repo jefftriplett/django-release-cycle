@@ -111,7 +111,7 @@ function drawChart() {
     {
       taskID: "1.11",
       taskName: "Django 1.11 LTS",
-      resource: "security",
+      resource: "dead",
       start: date(2017, 04, 04),
       end: date(2020, 04, 01)
     },
