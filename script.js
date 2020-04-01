@@ -1,6 +1,17 @@
 google.charts.load("current", { packages: ["gantt"] });
 google.charts.setOnLoadCallback(drawChart);
 
+function date(year, monthNumber, day) {
+  // new Date() takes a monthIndex:
+  //    Integer value representing the month,
+  //    beginning with 0 for January to 11 for December.
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date
+
+  // This is a wrapper so you don't need to always subtract one
+
+  return new Date(year, monthNumber-1, day)
+}
+
 function drawChart() {
   var data = new google.visualization.DataTable();
   data.addColumn("string", "Task ID");
@@ -17,141 +28,141 @@ function drawChart() {
     //   taskID: "0.9",
     //   taskName: "Django 0.9",
     //   resource: "dead",
-    //   start: new Date(2005, 11, 16),
-    //   end: new Date(2013, 02, 26)
+    //   start: date(2005, 11, 16),
+    //   end: date(2013, 02, 26)
     // },
     // {
     //   taskID: "1.0",
     //   taskName: "Django 1.0",
     //   resource: "dead",
-    //   start: new Date(2008, 09, 03),
-    //   end: new Date(2013, 02, 26)
+    //   start: date(2008, 09, 03),
+    //   end: date(2013, 02, 26)
     // },
     // {
     //   taskID: "1.1",
     //   taskName: "Django 1.1",
     //   resource: "dead",
-    //   start: new Date(2009, 07, 29),
-    //   end: new Date(2013, 02, 26)
+    //   start: date(2009, 07, 29),
+    //   end: date(2013, 02, 26)
     // },
     // {
     //   taskID: "1.2",
     //   taskName: "Django 1.2",
     //   resource: "dead",
-    //   start: new Date(2010, 05, 17),
-    //   end: new Date(2013, 02, 26)
+    //   start: date(2010, 05, 17),
+    //   end: date(2013, 02, 26)
     // },
     // {
     //   taskID: "1.3",
     //   taskName: "Django 1.3",
     //   resource: "dead",
-    //   start: new Date(2011, 03, 23),
-    //   end: new Date(2013, 02, 26)
+    //   start: date(2011, 03, 23),
+    //   end: date(2013, 02, 26)
     // },
 //     {
 //       taskID: "1.4",
 //       taskName: "Django 1.4 LTS",
 //       resource: "dead",
-//       start: new Date(2012, 03, 23),
-//       end: new Date(2015, 10, 01)
+//       start: date(2012, 03, 23),
+//       end: date(2015, 10, 01)
 //     },
 //     {
 //       taskID: "1.5",
 //       taskName: "Django 1.5",
 //       resource: "dead",
-//       start: new Date(2013, 03, 26),
-//       end: new Date(2014, 09, 02)
+//       start: date(2013, 03, 26),
+//       end: date(2014, 09, 02)
 //     },
 //     {
 //       taskID: "1.6",
 //       taskName: "Django 1.6",
 //       resource: "dead",
-//       start: new Date(2013, 11, 03),
-//       end: new Date(2015, 04, 01)
+//       start: date(2013, 11, 03),
+//       end: date(2015, 04, 01)
 //     },
 //     {
 //       taskID: "1.7",
 //       taskName: "Django 1.7",
 //       resource: "dead",
-//       start: new Date(2014, 09, 02),
-//       end: new Date(2015, 12, 01)
+//       start: date(2014, 09, 02),
+//       end: date(2015, 12, 01)
 //     },
 //     {
 //       taskID: "1.8",
 //       taskName: "Django 1.8 LTS",
 //       resource: "dead",
-//       start: new Date(2015, 04, 01),
-//       end: new Date(2018, 04, 01)
+//       start: date(2015, 04, 01),
+//       end: date(2018, 04, 01)
 //     },
 //     {
 //       taskID: "1.9",
 //       taskName: "Django 1.9",
 //       resource: "dead",
-//       start: new Date(2015, 12, 01),
-//       end: new Date(2017, 04, 04)
+//       start: date(2015, 12, 01),
+//       end: date(2017, 04, 04)
 //     },
 //     {
 //       taskID: "1.10",
 //       taskName: "Django 1.10",
 //       resource: "dead",
-//       start: new Date(2016, 08, 01),
-//       end: new Date(2017, 12, 02)
+//       start: date(2016, 08, 01),
+//       end: date(2017, 12, 02)
 //     },
     {
       taskID: "1.11",
       taskName: "Django 1.11 LTS",
       resource: "security",
-      start: new Date(2017, 04, 04),
-      end: new Date(2020, 04, 01)
+      start: date(2017, 04, 04),
+      end: date(2020, 04, 01)
     },
     {
       taskID: "2.0",
       taskName: "Django 2.0",
       resource: "dead",
-      start: new Date(2017, 12, 02),
-      end: new Date(2019, 04, 01)
+      start: date(2017, 12, 02),
+      end: date(2019, 04, 01)
     },
     {
       taskID: "2.1",
       taskName: "Django 2.1",
       resource: "dead",
-      start: new Date(2018, 08, 01),
-      end: new Date(2019, 12, 02)
+      start: date(2018, 08, 01),
+      end: date(2019, 12, 02)
     },
     {
       taskID: "2.2",
       taskName: "Django 2.2 LTS",
       resource: "bugfix",
-      start: new Date(2019, 01, 01),
-      end: new Date(2022, 04, 01)
+      start: date(2019, 01, 01),
+      end: date(2022, 04, 01)
     },
     {
       taskID: "3.0",
       taskName: "Django 3.0",
       resource: "bugfix",
-      start: new Date(2019, 12, 02),
-      end: new Date(2021, 04, 01)
+      start: date(2019, 12, 02),
+      end: date(2021, 04, 01)
     },
     {
       taskID: "3.1",
       taskName: "Django 3.1",
       resource: "prerelease",
-      start: new Date(2020, 08, 01),
-      end: new Date(2021, 12, 01)
+      start: date(2020, 08, 01),
+      end: date(2021, 12, 01)
     },
     {
       taskID: "3.2",
       taskName: "Django 3.2 LTS",
       resource: "prerelease",
-      start: new Date(2021, 04, 01),
-      end: new Date(2024, 04, 01)
+      start: date(2021, 04, 01),
+      end: date(2024, 04, 01)
     },
     {
       taskID: "4.0",
       taskName: "Django 4.0",
       resource: "prerelease",
-      start: new Date(2021, 12, 01),
-      end: new Date(2023, 04, 01)
+      start: date(2021, 12, 01),
+      end: date(2023, 04, 01)
     }
   ];
 
