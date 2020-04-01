@@ -166,7 +166,16 @@ function drawChart() {
     }
   ];
 
+  const now = new Date();
+
   for (var release of releases) {
+    // Validate past and future
+    if (release.end < now) {
+      release.resource = 'dead';
+    } else if (now < release.start) {
+      release.resource = 'prerelease';
+    }
+
     data.addRow([
       release.taskID,
       release.taskName,
