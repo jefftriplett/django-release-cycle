@@ -280,7 +280,7 @@ function drawChart() {
     var timelineUnit;
     var timelineWidth;
     var timespan;
-  
+
     baseline = null;
     timeline = null;
     svg = null;
@@ -307,21 +307,21 @@ function drawChart() {
         (markerDate.getTime() > dateRangeEnd.max.getTime())) {
       return;
     }
-  
+
     // calculate placement
     timelineWidth = parseFloat(timeline.getAttribute('width'));
     baselineBounds = baseline.getBBox();
     timespan = dateRangeEnd.max.getTime() - dateRangeStart.min.getTime();
     timelineUnit = (timelineWidth - baselineBounds.x) / timespan;
     markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
-  
+
     // add label
     markerLabel.setAttribute('fill', '#e91e63');
     markerLabel.setAttribute('y', options.height);
     markerLabel.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan) - 4));
     markerLabel.textContent = formatDate.formatValue(markerDate);
     svg.appendChild(markerLabel);
-  
+
     // add line
     markerLine = timeline.cloneNode(true);
     markerLine.setAttribute('y', 0);
