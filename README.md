@@ -1,37 +1,24 @@
-Welcome to Glitch
-=================
+<h1 align="center">Welcome to Django Release Cycle 👋</h1>
+<p>
+  <a href="https://twitter.com/webology" target="_blank">
+    <img alt="Twitter: webology" src="https://img.shields.io/twitter/follow/webology.svg?style=social" />
+  </a>
+</p>
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+> [Django Release Cycle](https://jefftriplett.com/django-release-cycle/) is based on [Dustin Ingram](https://github.com/di)'s [Python Release Cycle](https://python-release-cycle.glitch.me/).
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+### 🏠 [Homepage](https://jefftriplett.com/django-release-cycle/)
 
-Find out more [about Glitch](https://glitch.com/about).
+![](./assets/screenshot.png)
 
+## Author
 
-Your Project
-------------
+👤 **Jeff Triplett**
 
-### ← README.md
+* Website: https://jefftriplett.com
+* Twitter: [@webology](https://twitter.com/webology)
+* Github: [@jefftriplett](https://github.com/jefftriplett)
 
-That's this file, where you can tell people what your cool website does and how you built it.
+## Show your support
 
-### ← index.html
-
-Where you'll write the content of your website. 
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+Give a ⭐️ if this project helped you!
