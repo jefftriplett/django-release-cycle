@@ -48,114 +48,124 @@ function drawChart() {
     //   start: new Date(2011, 03, 23),
     //   end: new Date(2013, 02, 26)
     // },
-//     {
-//       taskID: "1.4",
-//       taskName: "Django 1.4 LTS",
-//       resource: "dead",
-//       start: new Date(2012, 03, 23),
-//       end: new Date(2015, 10, 01)
-//     },
-//     {
-//       taskID: "1.5",
-//       taskName: "Django 1.5",
-//       resource: "dead",
-//       start: new Date(2013, 03, 26),
-//       end: new Date(2014, 09, 02)
-//     },
-//     {
-//       taskID: "1.6",
-//       taskName: "Django 1.6",
-//       resource: "dead",
-//       start: new Date(2013, 11, 03),
-//       end: new Date(2015, 04, 01)
-//     },
-//     {
-//       taskID: "1.7",
-//       taskName: "Django 1.7",
-//       resource: "dead",
-//       start: new Date(2014, 09, 02),
-//       end: new Date(2015, 12, 01)
-//     },
-//     {
-//       taskID: "1.8",
-//       taskName: "Django 1.8 LTS",
-//       resource: "dead",
-//       start: new Date(2015, 04, 01),
-//       end: new Date(2018, 04, 01)
-//     },
-//     {
-//       taskID: "1.9",
-//       taskName: "Django 1.9",
-//       resource: "dead",
-//       start: new Date(2015, 12, 01),
-//       end: new Date(2017, 04, 04)
-//     },
-//     {
-//       taskID: "1.10",
-//       taskName: "Django 1.10",
-//       resource: "dead",
-//       start: new Date(2016, 08, 01),
-//       end: new Date(2017, 12, 02)
-//     },
+    // {
+    //   taskID: "1.4",
+    //   taskName: "Django 1.4 LTS",
+    //   resource: "dead",
+    //   start: new Date(2012, 03, 23),
+    //   end: new Date(2015, 10, 01)
+    // },
+    // {
+    //   taskID: "1.5",
+    //   taskName: "Django 1.5",
+    //   resource: "dead",
+    //   start: new Date(2013, 03, 26),
+    //   end: new Date(2014, 09, 02)
+    // },
+    // {
+    //   taskID: "1.6",
+    //   taskName: "Django 1.6",
+    //   resource: "dead",
+    //   start: new Date(2013, 11, 03),
+    //   end: new Date(2015, 04, 01)
+    // },
+    // {
+    //   taskID: "1.7",
+    //   taskName: "Django 1.7",
+    //   resource: "dead",
+    //   start: new Date(2014, 09, 02),
+    //   end: new Date(2015, 12, 01)
+    // },
+    // {
+    //   taskID: "1.8",
+    //   taskName: "Django 1.8 LTS",
+    //   resource: "dead",
+    //   start: new Date(2015, 04, 01),
+    //   end: new Date(2018, 04, 01)
+    // },
+    // {
+    //   taskID: "1.9",
+    //   taskName: "Django 1.9",
+    //   resource: "dead",
+    //   start: new Date(2015, 12, 01),
+    //   end: new Date(2017, 04, 04)
+    // },
+    // {
+    //   taskID: "1.10",
+    //   taskName: "Django 1.10",
+    //   resource: "dead",
+    //   start: new Date(2016, 8, 1),
+    //   end: new Date(2017, 12, 2),
+    // },
     {
       taskID: "1.11",
       taskName: "Django 1.11 LTS",
-      resource: "security",
-      start: new Date(2017, 04, 04),
-      end: new Date(2020, 04, 01)
+      resource: "dead",
+      start: new Date(2017, 4, 4),
+      end: new Date(2020, 3, 4),
     },
     {
       taskID: "2.0",
       taskName: "Django 2.0",
       resource: "dead",
-      start: new Date(2017, 12, 02),
-      end: new Date(2019, 04, 01)
+      start: new Date(2017, 12, 2),
+      end: new Date(2019, 4, 1),
     },
     {
       taskID: "2.1",
       taskName: "Django 2.1",
       resource: "dead",
-      start: new Date(2018, 08, 01),
-      end: new Date(2019, 12, 02)
+      start: new Date(2018, 8, 1),
+      end: new Date(2019, 12, 2),
     },
     {
       taskID: "2.2",
       taskName: "Django 2.2 LTS",
       resource: "bugfix",
-      start: new Date(2019, 01, 01),
-      end: new Date(2022, 04, 01)
+      start: new Date(2019, 1, 1),
+      end: new Date(2022, 4, 1),
     },
     {
       taskID: "3.0",
       taskName: "Django 3.0",
       resource: "bugfix",
-      start: new Date(2019, 12, 02),
-      end: new Date(2021, 04, 01)
+      start: new Date(2019, 12, 2),
+      end: new Date(2021, 4, 1),
     },
     {
       taskID: "3.1",
       taskName: "Django 3.1",
       resource: "prerelease",
-      start: new Date(2020, 08, 01),
-      end: new Date(2021, 12, 01)
+      start: new Date(2020, 8, 1),
+      end: new Date(2021, 12, 1),
     },
     {
       taskID: "3.2",
       taskName: "Django 3.2 LTS",
       resource: "prerelease",
-      start: new Date(2021, 04, 01),
-      end: new Date(2024, 04, 01)
+      start: new Date(2021, 4, 1),
+      end: new Date(2024, 4, 1),
     },
     {
       taskID: "4.0",
       taskName: "Django 4.0",
       resource: "prerelease",
-      start: new Date(2021, 12, 01),
-      end: new Date(2023, 04, 01)
-    }
+      start: new Date(2021, 12, 1),
+      end: new Date(2023, 4, 1),
+    },
   ];
 
+  const now = new Date();
+
   for (var release of releases) {
+    // Validate past and future
+    if (release.end < now) {
+      release.resource = "dead";
+      // document.write("True" + release.taskName + "<br>");
+    } else if (now < release.start) {
+      release.resource = "prerelease";
+    }
+
     data.addRow([
       release.taskID,
       release.taskName,
@@ -163,99 +173,84 @@ function drawChart() {
       release.start,
       release.end,
       null,
-      Math.floor(
-        Math.max(
-          ((Math.min(new Date(), release.end) - release.start) /
-            (release.end - release.start)) *
-            100,
-          0
-        ) * 100
-      ) / 100,
+      Math.floor(Math.max((Math.min(new Date(), release.end)-release.start)/(release.end-release.start)*100,0)*100)/100,
       null
     ]);
   }
 
-  // height per horizontal track
-  var trackHeight = 30;
-  // buffer for container height
-  var bufferForHeight = 50;
-  // height of entire container
-  var containerHeight = (trackHeight * releases.length) + bufferForHeight;
-
   var options = {
-    height: containerHeight,
+    height: 400,
     gantt: {
-      trackHeight: trackHeight,
+      trackHeight: 30,
       palette: [
         {
           // Red
           color: "#db4437",
           dark: "#a52714",
-          light: "#f4c7c3"
+          light: "#f4c7c3",
         },
         {
           // Yellow
           color: "#f2a600",
           dark: "#ee8100",
-          light: "#fce8b2"
+          light: "#fce8b2",
         },
         {
           // Green
           color: "#0f9d58",
           dark: "#0b8043",
-          light: "#b7e1cd"
+          light: "#b7e1cd",
         },
         {
           // Blue
           color: "#5e97f6",
           dark: "#2a56c6",
-          light: "#c6dafc"
+          light: "#c6dafc",
         },
         {
           color: "#ab47bc",
           dark: "#6a1b9a",
-          light: "#e1bee7"
+          light: "#e1bee7",
         },
         {
           color: "#00acc1",
           dark: "#00838f",
-          light: "#b2ebf2"
+          light: "#b2ebf2",
         },
         {
           color: "#ff7043",
           dark: "#e64a19",
-          light: "#ffccbc"
+          light: "#ffccbc",
         },
         {
           color: "#9e9d24",
           dark: "#827717",
-          light: "#f0f4c3"
+          light: "#f0f4c3",
         },
         {
           color: "#5c6bc0",
           dark: "#3949ab",
-          light: "#c5cae9"
+          light: "#c5cae9",
         },
         {
           color: "#f06292",
           dark: "#e91e63",
-          light: "#f8bbd0"
+          light: "#f8bbd0",
         },
         {
           color: "#00796b",
           dark: "#004d40",
-          light: "#b2dfdb"
+          light: "#b2dfdb",
         },
         {
           color: "#c2185b",
           dark: "#880e4f",
-          light: "#f48fb1"
-        }
-      ]
-    }
+          light: "#f48fb1",
+        },
+      ],
+    },
   };
 
-  var container = document.getElementById("chart_div");
   var chart = new google.visualization.Gantt(
     container
   );
