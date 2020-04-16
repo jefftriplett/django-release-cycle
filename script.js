@@ -108,6 +108,7 @@ function drawChart() {
 //       start: date(2016, 08, 01),
 //       end: date(2017, 12, 02)
 //     },
+
     {
       taskID: "1.11",
       taskName: "Django 1.11 LTS",
@@ -183,14 +184,7 @@ function drawChart() {
       release.start,
       release.end,
       null,
-      Math.floor(
-        Math.max(
-          ((Math.min(new Date(), release.end) - release.start) /
-            (release.end - release.start)) *
-            100,
-          0
-        ) * 100
-      ) / 100,
+      Math.floor(Math.max((Math.min(new Date(), release.end)-release.start)/(release.end-release.start)*100,0)*100)/100,
       null
     ]);
   }
@@ -300,7 +294,7 @@ function drawChart() {
     var timelineUnit;
     var timelineWidth;
     var timespan;
-  
+
     baseline = null;
     timeline = null;
     svg = null;
@@ -327,21 +321,21 @@ function drawChart() {
         (markerDate.getTime() > dateRangeEnd.max.getTime())) {
       return;
     }
-  
+
     // calculate placement
     timelineWidth = parseFloat(timeline.getAttribute('width'));
     baselineBounds = baseline.getBBox();
     timespan = dateRangeEnd.max.getTime() - dateRangeStart.min.getTime();
     timelineUnit = (timelineWidth - baselineBounds.x) / timespan;
     markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
-  
+
     // add label
     markerLabel.setAttribute('fill', '#e91e63');
     markerLabel.setAttribute('y', options.height);
     markerLabel.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan) - 4));
     markerLabel.textContent = formatDate.formatValue(markerDate);
     svg.appendChild(markerLabel);
-  
+
     // add line
     markerLine = timeline.cloneNode(true);
     markerLine.setAttribute('y', 0);
