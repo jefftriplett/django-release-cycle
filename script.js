@@ -147,8 +147,8 @@ function drawChart() {
     {
       taskID: "3.1",
       taskName: "Django 3.1",
-      resource: "prerelease",
-      start: date(2020, 08, 01),
+      resource: "bugfix",
+      start: date(2020, 08, 04),
       end: date(2021, 12, 01)
     },
     {
