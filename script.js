@@ -164,6 +164,27 @@ function drawChart() {
       resource: "prerelease",
       start: date(2021, 12, 01),
       end: date(2023, 04, 01)
+    },
+    {
+      taskID: "4.1",
+      taskName: "Django 4.1",
+      resource: "prerelease",
+      start: date(2022, 08, 01),
+      end: date(2023, 12, 01)
+    },
+    {
+      taskID: "4.2",
+      taskName: "Django 4.2 LTS",
+      resource: "prerelease",
+      start: date(2023, 04, 01),
+      end: date(2026, 04, 01)
+    },
+    {
+      taskID: "5.0",
+      taskName: "Django 5.0",
+      resource: "prerelease",
+      start: date(2023, 12, 01),
+      end: date(2025, 04, 01)
     }
   ];
 
