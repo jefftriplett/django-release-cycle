@@ -1,6 +1,6 @@
 #/usr/local/bin/bash
 
-pageres 1200x540 \
+npx pageres-cli 1200x540 \
     --filename=assets/screenshot \
     --format=png \
     --overwrite \
