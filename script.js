@@ -133,7 +133,7 @@ function drawChart() {
     {
       taskID: "2.2",
       taskName: "Django 2.2 LTS",
-      resource: "bugfix",
+      resource: "security",
       start: date(2019, 01, 01),
       end: date(2022, 04, 01)
     },
@@ -147,15 +147,15 @@ function drawChart() {
     {
       taskID: "3.1",
       taskName: "Django 3.1",
-      resource: "bugfix",
+      resource: "security",
       start: date(2020, 08, 04),
       end: date(2021, 12, 01)
     },
     {
       taskID: "3.2",
       taskName: "Django 3.2 LTS",
-      resource: "prerelease",
-      start: date(2021, 04, 01),
+      resource: "bugfix",
+      start: date(2021, 04, 06),
       end: date(2024, 04, 01)
     },
     {
@@ -228,12 +228,12 @@ function drawChart() {
           dark: "#a52714",
           light: "#f4c7c3"
         },
-        // {
-        //   // Yellow
-        //   color: "#f2a600",
-        //   dark: "#ee8100",
-        //   light: "#fce8b2"
-        // },
+        {
+          // Yellow
+          color: "#f2a600",
+          dark: "#ee8100",
+          light: "#fce8b2"
+        },
         {
           // Green
           color: "#0f9d58",
@@ -246,46 +246,54 @@ function drawChart() {
           dark: "#2a56c6",
           light: "#c6dafc"
         },
-        {
-          color: "#ab47bc",
-          dark: "#6a1b9a",
-          light: "#e1bee7"
-        },
-        {
-          color: "#00acc1",
-          dark: "#00838f",
-          light: "#b2ebf2"
-        },
-        {
-          color: "#ff7043",
-          dark: "#e64a19",
-          light: "#ffccbc"
-        },
-        {
-          color: "#9e9d24",
-          dark: "#827717",
-          light: "#f0f4c3"
-        },
-        {
-          color: "#5c6bc0",
-          dark: "#3949ab",
-          light: "#c5cae9"
-        },
-        {
-          color: "#f06292",
-          dark: "#e91e63",
-          light: "#f8bbd0"
-        },
-        {
-          color: "#00796b",
-          dark: "#004d40",
-          light: "#b2dfdb"
-        },
-        {
-          color: "#c2185b",
-          dark: "#880e4f",
-          light: "#f48fb1"
-        }
+        // {
+        //   // Purple
+        //   color: "#ab47bc",
+        //   dark: "#6a1b9a",
+        //   light: "#e1bee7"
+        // },
+        // {
+        //   // Teal
+        //   color: "#00acc1",
+        //   dark: "#00838f",
+        //   light: "#b2ebf2"
+        // },
+        // {
+        //   // Orange
+        //   color: "#ff7043",
+        //   dark: "#e64a19",
+        //   light: "#ffccbc"
+        // },
+        // {
+        //   // Lime Green
+        //   color: "#9e9d24",
+        //   dark: "#827717",
+        //   light: "#f0f4c3"
+        // },
+        // {
+        //   // Purple/Grape
+        //   color: "#5c6bc0",
+        //   dark: "#3949ab",
+        //   light: "#c5cae9"
+        // },
+        // {
+        //   // Pink
+        //   color: "#f06292",
+        //   dark: "#e91e63",
+        //   light: "#f8bbd0"
+        // },
+        // {
+        //   // Dark Green
+        //   color: "#00796b",
+        //   dark: "#004d40",
+        //   light: "#b2dfdb"
+        // },
+        // {
+        //   // Hot Pink
+        //   color: "#c2185b",
+        //   dark: "#880e4f",
+        //   light: "#f48fb1"
+        // }
       ]
     }
   };
