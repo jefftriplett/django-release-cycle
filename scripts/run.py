@@ -1,5 +1,3 @@
-import json
-import norwegianblue
 import requests
 import typer
 
@@ -12,28 +10,30 @@ cli = typer.Typer()
 
 @cli.command()
 def main():
-    release_date = {
+    future_release_dates = {
         "4.1": date(2022, 8, 1),
         "4.2": date(2023, 4, 1),
         "5.0": date(2023, 12, 1),
     }
 
-    pypi = requests.get("https://pypi.org/pypi/Django/json").json()
+    url = "https://pypi.org/pypi/Django/json"
+    pypi = requests.get(url).json()
     keys = [key for key in pypi["releases"].keys() if len(key.split(".")) == 2]
     for key in keys:
         if len(pypi["releases"][key]):
-            release_date[key] = parse(pypi["releases"][key][0]["upload_time"]).date()
+            future_release_dates[key] = parse(pypi["releases"][key][0]["upload_time"]).date()
 
+    url = "https://endoflife.date/api/django.json"
+    data = requests.get(url).json()
     releases = {}
-    data = json.loads(norwegianblue.norwegianblue(product="django", format="json"))
     for release in data:
         cycle = release["cycle"]
         task_name = f"Django {cycle}"
         if "lts" in release:
             task_name = f"{task_name} LTS"
 
-        if cycle in release_date:
-            start = release_date[cycle]
+        if cycle in future_release_dates:
+            start = future_release_dates[cycle]
         else:
             start = datetime.now().date()
 
@@ -63,7 +63,7 @@ def main():
             "cycle": "4.1",
             "task_name": "Django 4.1",
             "resource": "prerelease",
-            "start": release_date["4.1"],
+            "start": future_release_dates["4.1"],
             "end": date(2023, 12, 1),
         }
 
@@ -72,7 +72,7 @@ def main():
             "cycle": "4.2",
             "task_name": "Django 4.2 LTS",
             "resource": "prerelease",
-            "start": release_date["4.2"],
+            "start": future_release_dates["4.2"],
             "end": date(2026, 4, 1),
         }
 
@@ -81,7 +81,7 @@ def main():
             "cycle": "5.0",
             "task_name": "Django 5.0",
             "resource": "prerelease",
-            "start": release_date["5.0"],
+            "start": future_release_dates["5.0"],
             "end": date(2025, 4, 1),
         }
 
