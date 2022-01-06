@@ -4,8 +4,9 @@
 @build:
     cog -r script.js
 
-
-    #/usr/local/bin/bash
+@lint:
+    -cog --check script.js
+    -djhtml --tabwidth=2 --in-place index.html
 
 @screenshot:
     npx pageres-cli 1200x540 \
