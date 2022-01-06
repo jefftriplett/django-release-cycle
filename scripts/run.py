@@ -16,6 +16,7 @@ def main():
         "5.0": date(2023, 12, 1),
     }
 
+    # pull release dates from pypi
     url = "https://pypi.org/pypi/Django/json"
     pypi = requests.get(url).json()
     keys = [key for key in pypi["releases"].keys() if len(key.split(".")) == 2]
@@ -23,6 +24,7 @@ def main():
         if len(pypi["releases"][key]):
             future_release_dates[key] = parse(pypi["releases"][key][0]["upload_time"]).date()
 
+    # pull eol and eos dates from endoflife.date
     url = "https://endoflife.date/api/django.json"
     data = requests.get(url).json()
     releases = {}
