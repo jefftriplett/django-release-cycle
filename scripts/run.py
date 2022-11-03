@@ -14,6 +14,8 @@ def main():
         "4.1": date(2022, 8, 1),
         "4.2": date(2023, 4, 1),
         "5.0": date(2023, 12, 1),
+        "5.1": date(2024, 8, 1),
+        "5.2": date(2025, 5, 1),
     }
 
     # pull release dates from pypi
@@ -85,6 +87,24 @@ def main():
             "resource": "prerelease",
             "start": future_release_dates["5.0"],
             "end": date(2025, 4, 1),
+        }
+
+    if "5.1" not in releases:
+        releases["5.1"] = {
+            "cycle": "5.1",
+            "task_name": "Django 5.1",
+            "resource": "prerelease",
+            "start": future_release_dates["5.1"],
+            "end": date(2025, 12, 1),
+        }
+
+    if "5.2" not in releases:
+        releases["5.2"] = {
+            "cycle": "5.2",
+            "task_name": "Django 5.2",
+            "resource": "prerelease",
+            "start": future_release_dates["5.2"],
+            "end": date(2028, 4, 1),
         }
 
     for release in releases:
