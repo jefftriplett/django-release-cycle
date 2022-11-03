@@ -116,7 +116,7 @@ function drawChart() {
     },
     {
       taskID: "5.2",
-      taskName: "Django 5.2",
+      taskName: "Django 5.2 LTS",
       resource: "prerelease",
       start: date(2025, 05, 01),
       end: date(2028, 04, 01)

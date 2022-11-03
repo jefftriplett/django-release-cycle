@@ -101,7 +101,7 @@ def main():
     if "5.2" not in releases:
         releases["5.2"] = {
             "cycle": "5.2",
-            "task_name": "Django 5.2",
+            "task_name": "Django 5.2 LTS",
             "resource": "prerelease",
             "start": future_release_dates["5.2"],
             "end": date(2028, 4, 1),
