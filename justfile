@@ -2,7 +2,7 @@
     just --list
 
 @build:
-    cog -r script.js
+    cog -P -r script.js
 
 @lint:
     -cog --check script.js

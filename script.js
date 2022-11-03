@@ -28,7 +28,7 @@ function drawChart() {
     // import cog
     // import subprocess
     // output = subprocess.getoutput("python scripts/run.py")
-    // cog.outl(output)
+    // print(output)
     // ]]]
     {
       taskID: "4.1",
