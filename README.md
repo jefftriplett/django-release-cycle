@@ -11,14 +11,23 @@
 
 ![](./assets/screenshot.png)
 
+<!-- [[[cog
+import cog
+import requests
+response = requests.get("https://raw.githubusercontent.com/jefftriplett/actions/main/footer.txt")
+response.raise_for_status()
+print(response.text.strip())
+]]] -->
 ## Author
 
 👤 **Jeff Triplett**
 
 * Website: https://jefftriplett.com
+* Mastodon: [@webology](https://mastodon.social/@webology)
 * Twitter: [@webology](https://twitter.com/webology)
-* Github: [@jefftriplett](https://github.com/jefftriplett)
+* GitHub: [@jefftriplett](https://github.com/jefftriplett)
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+<!-- [[[end]]] -->
