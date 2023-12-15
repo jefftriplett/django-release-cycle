@@ -16,6 +16,8 @@ def main():
         "5.0": date(2023, 12, 1),
         "5.1": date(2024, 8, 1),
         "5.2": date(2025, 5, 1),
+        "6.0": date(2025, 12, 1),
+        "6.1": date(2026, 8, 1),
     }
 
     # pull release dates from pypi
@@ -34,7 +36,8 @@ def main():
         cycle = release["cycle"]
         task_name = f"Django {cycle}"
         if "lts" in release:
-            task_name = f"{task_name} LTS"
+            if release["lts"]:
+                task_name = f"{task_name} LTS"
 
         if cycle in future_release_dates:
             start = future_release_dates[cycle]
@@ -105,6 +108,24 @@ def main():
             "resource": "prerelease",
             "start": future_release_dates["5.2"],
             "end": date(2028, 4, 1),
+        }
+
+    if "6.0" not in releases:
+        releases["6.0"] = {
+            "cycle": "6.0",
+            "task_name": "Django 6.0",
+            "resource": "prerelease",
+            "start": future_release_dates["6.0"],
+            "end": date(2027, 4, 1),
+        }
+
+    if "6.1" not in releases:
+        releases["6.1"] = {
+            "cycle": "6.1",
+            "task_name": "Django 6.1",
+            "resource": "prerelease",
+            "start": future_release_dates["6.1"],
+            "end": date(2027, 12, 1),
         }
 
     for release in releases:

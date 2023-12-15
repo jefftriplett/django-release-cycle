@@ -31,16 +31,30 @@ function drawChart() {
     // print(output)
     // ]]]
     {
+      taskID: "5.0",
+      taskName: "Django 5.0",
+      resource: "bugfix",
+      start: date(2023, 12, 04),
+      end: date(2025, 04, 01)
+    },
+    {
+      taskID: "4.2",
+      taskName: "Django 4.2 LTS",
+      resource: "security",
+      start: date(2023, 04, 03),
+      end: date(2026, 04, 01)
+    },
+    {
       taskID: "4.1",
       taskName: "Django 4.1",
-      resource: "bugfix",
+      resource: "dead",
       start: date(2022, 08, 03),
       end: date(2023, 12, 01)
     },
     {
       taskID: "4.0",
       taskName: "Django 4.0",
-      resource: "security",
+      resource: "dead",
       start: date(2021, 12, 07),
       end: date(2023, 04, 01)
     },
@@ -94,20 +108,6 @@ function drawChart() {
       end: date(2020, 04, 01)
     },
     {
-      taskID: "4.2",
-      taskName: "Django 4.2 LTS",
-      resource: "prerelease",
-      start: date(2023, 04, 01),
-      end: date(2026, 04, 01)
-    },
-    {
-      taskID: "5.0",
-      taskName: "Django 5.0",
-      resource: "prerelease",
-      start: date(2023, 12, 01),
-      end: date(2025, 04, 01)
-    },
-    {
       taskID: "5.1",
       taskName: "Django 5.1",
       resource: "prerelease",
@@ -120,6 +120,20 @@ function drawChart() {
       resource: "prerelease",
       start: date(2025, 05, 01),
       end: date(2028, 04, 01)
+    },
+    {
+      taskID: "6.0",
+      taskName: "Django 6.0",
+      resource: "prerelease",
+      start: date(2025, 12, 01),
+      end: date(2027, 04, 01)
+    },
+    {
+      taskID: "6.1",
+      taskName: "Django 6.1",
+      resource: "prerelease",
+      start: date(2026, 08, 01),
+      end: date(2027, 12, 01)
     },
     // [[[end]]]
   ];
