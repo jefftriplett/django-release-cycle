@@ -5,10 +5,6 @@ from datetime import date, datetime
 from dateutil.parser import parse
 
 
-cli = typer.Typer()
-
-
-@cli.command()
 def main():
     future_release_dates = {
         "4.1": date(2022, 8, 1),
@@ -35,9 +31,8 @@ def main():
     for release in data:
         cycle = release["cycle"]
         task_name = f"Django {cycle}"
-        if "lts" in release:
-            if release["lts"]:
-                task_name = f"{task_name} LTS"
+        if "lts" in release and release["lts"]:
+            task_name = f"{task_name} LTS"
 
         if cycle in future_release_dates:
             start = future_release_dates[cycle]
@@ -142,4 +137,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    typer.run(main)
