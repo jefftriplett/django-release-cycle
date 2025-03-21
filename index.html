@@ -4,8 +4,8 @@
     <!-- HTML Meta Tags -->
     <title>Django Release Cycle</title>
     <meta name="description" content="A chart showing all release dates and end-of-life dates for all modern Django versions.">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Facebook Meta Tags -->
@@ -23,23 +23,43 @@
     <meta name="twitter:description" content="A chart showing all release dates and end-of-life dates for all modern Django versions.">
     <meta name="twitter:image" content="https://jefftriplett.com/django-release-cycle/assets/screenshot.png">
 
-    <!-- import the webpage's stylesheet -->
+    <!-- Stylesheets and Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- import the webpage's javascript file -->
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container max-w-xs px-8 mx-auto text-xl xl:max-w-7xl lg:max-w-6xl md:max-w-3xl sm:max-w-md border-4 border-gray-900 bg-gradient-to-br from-green-600 to-green-800 py-16">
-      <div class="lg:content-auto h-screen text-green-100">
+    <div class="container max-w-xs px-8 mx-auto text-xl xl:max-w-7xl lg:max-w-6xl md:max-w-3xl sm:max-w-md border-4 border-gray-900 bg-gradient-to-br from-[#092e20] to-[#0c4b33] py-16">
+      <div class="lg:content-auto h-screen text-[#f5f5f5]">
+        <style>
+          a { color: #44b78b; text-decoration: underline; transition: color 0.2s ease; }
+          a:hover { color: #c9f0dd; }
+        </style>
         <header class="pb-12">
           <h1 class="text-4xl font-bold">
             Django Release Cycle
           </h1>
         </header>
-        <div id="chart_div" class="border-4 border-gray-900 p-2 bg-gray-100"></div>
+        <div id="chart_div" class="border-4 border-[#44b78b] p-2 bg-[#f4f9f6]"></div>
+        <div class="flex flex-wrap justify-center gap-4 mt-4 text-sm">
+          <div class="flex items-center">
+            <span class="inline-block w-4 h-4 mr-2 bg-[#44b78b]"></span>
+            <span>Mainstream/Bugfix Support</span>
+          </div>
+          <div class="flex items-center">
+            <span class="inline-block w-4 h-4 mr-2 bg-[#f2a600]"></span>
+            <span>Security Support</span>
+          </div>
+          <div class="flex items-center">
+            <span class="inline-block w-4 h-4 mr-2 bg-[#db4437]"></span>
+            <span>End of Life</span>
+          </div>
+          <div class="flex items-center">
+            <span class="inline-block w-4 h-4 mr-2 bg-[#5e97f6]"></span>
+            <span>Future Release</span>
+          </div>
+        </div>
         <footer class="pt-12 text-lg">
           <div>
             Made by:
@@ -50,26 +70,19 @@
           <div>
             Remixed from:
             <a href="https://twitter.com/di_codes">@di_codes</a>'s
-            <a href="https://python-release-cycle.glitch.me/"
-            >Python Release Cycle</a
-              >
-            </div>
-            <div>
-              Made with:
-              <a
-                href="https://developers.google.com/chart/interactive/docs/gallery/ganttchart"
-              >https://developers.google.com/chart/interactive/docs/gallery/ganttchart</a
-                >
-              </div>
-              <div>
-                Data Source:
-                <a href="https://www.djangoproject.com/download/#supported-versions"
-                >https://www.djangoproject.com/download/</a
-                  >
-                </div>
-              </footer>
-            </div>
-            <a class="github-fork-ribbon" href="https://github.com/jefftriplett/django-release-cycle" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+            <a href="https://python-release-cycle.glitch.me/">Python Release Cycle</a>
           </div>
-        </body>
-      </html>
+          <div>
+            Made with:
+            <a href="https://developers.google.com/chart/interactive/docs/gallery/ganttchart">Google Charts - Gantt Chart</a>
+          </div>
+          <div>
+            Data Source:
+            <a href="https://www.djangoproject.com/download/#supported-versions">Django Project Downloads</a>
+          </div>
+        </footer>
+      </div>
+      <a class="github-fork-ribbon" href="https://github.com/jefftriplett/django-release-cycle" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+    </div>
+  </body>
+</html>

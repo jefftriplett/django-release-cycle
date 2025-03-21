@@ -22,6 +22,9 @@ function drawChart() {
   data.addColumn("number", "Duration");
   data.addColumn("number", "Percent Complete");
   data.addColumn("string", "Dependencies");
+  
+  // Store mainstream support data separately
+  var mainstreamSupportDates = {};
 
   var releases = [
     // [[[cog
@@ -141,13 +144,18 @@ function drawChart() {
   const now = new Date();
 
   for (var release of releases) {
-    // Validate past and future
-    if (release.end < now) {
+    // Validate past and future, but preserve bugfix and security phases
+    if (release.end < now && !release.taskID.includes('-bugfix') && !release.taskID.includes('-security')) {
       release.resource = 'dead';
-    } else if (now < release.start) {
+    } else if (now < release.start && !release.taskID.includes('-bugfix') && !release.taskID.includes('-security')) {
       release.resource = 'prerelease';
     }
 
+    // Store mainstream support date if available
+    if (release.mainstream_support) {
+      mainstreamSupportDates[release.taskID] = release.mainstream_support;
+    }
+    
     data.addRow([
       release.taskID,
       release.taskName,
@@ -173,25 +181,25 @@ function drawChart() {
       trackHeight: trackHeight,
       palette: [
         {
-          // Red
+          // Dead (Red)
           color: "#db4437",
           dark: "#a52714",
           light: "#f4c7c3"
         },
         {
-          // Green
-          color: "#0f9d58",
-          dark: "#0b8043",
-          light: "#b7e1cd"
+          // Bugfix (Django Green)
+          color: "#44b78b",
+          dark: "#0C4B33",
+          light: "#c9f0dd"
         },
         {
-          // Yellow
+          // Security (Yellow)
           color: "#f2a600",
           dark: "#ee8100",
           light: "#fce8b2"
         },
         {
-          // Blue
+          // Prerelease (Blue)
           color: "#5e97f6",
           dark: "#2a56c6",
           light: "#c6dafc"
@@ -331,5 +339,8 @@ function drawChart() {
   google.visualization.events.addListener(chart, 'ready', function () {
     // add marker for current date
     addMarker(new Date());
+    
+    // Display mainstream support dates - could be added to tooltip or as markers
+    console.log("Mainstream support dates:", mainstreamSupportDates);
   });
 }
